@@ -1,25 +1,25 @@
 html {
-  background-color: #eae9fd;
-  background-image: -webkit-linear-gradient(65deg, #a683e3 50%, #eae9fd 50);
+  background-color: #9ba4b5;
+  background-image: -webkit-linear-gradient(65deg, #180931 50%, #eae9fd 50);
   min-height: 1000px;
-  font-family: "helvetica neue";
+  font-family: "Ubuntu", sans-serif;
 }
 
 h1 {
-  color: #fff;
+  color: #f1f6f9;
   padding: 10px;
 }
 
 .box {
   max-width: 400px;
-  margin: 50px auto;
-  background: white;
+  margin: 25px auto;
+  background: #f1f6f9;
   border-radius: 5px;
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
 }
 
 #heading {
-  background-color: #a683e3;
+  background-color: #212a3e;
   text-align: center;
 }
 
@@ -27,16 +27,31 @@ h1 {
   min-height: 70px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f6f9;
+  overflow-wrap: anywhere;
 }
 
 .item:last-child {
   border-bottom: 0;
 }
 
-input:checked + p {
+.inner-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 25px;
+  margin-left: 0;
+}
+
+.fa-trash-can:hover {
+  color: #e74c3c;
+  cursor: pointer;
+}
+
+input:checked + form p {
   text-decoration: line-through;
-  text-decoration-color: #a683e3;
+  text-decoration-color: #212a3e;
 }
 
 input[type="checkbox"] {
@@ -50,10 +65,10 @@ input[type="checkbox"] {
 
 p {
   margin: 0;
-  padding: 20px;
+  padding: 20px 0px;
   font-size: 20px;
   font-weight: 200;
-  color: #00204a;
+  color: #394867;
 }
 
 form {
@@ -67,7 +82,7 @@ form {
   width: 50px;
   border-radius: 50%;
   border-color: transparent;
-  background-color: #a683e3;
+  background-color: #394867;
   color: #fff;
   font-size: 30px;
   padding-bottom: 6px;
@@ -93,7 +108,7 @@ input[type="text"] {
 
 input[type="text"]:focus {
   outline: none;
-  box-shadow: inset 0 -3px 0 0 #a683e3;
+  box-shadow: inset 0 -3px 0 0 #394867;
 }
 
 ::placeholder {
@@ -102,7 +117,18 @@ input[type="text"]:focus {
 }
 
 footer {
-  color: white;
-  color: rgb (0, 0, 0, 0.5);
+  color: #394867;
   text-align: center;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #212a3e;
+  padding: 10px;
+}
+
+.invis-btn {
+  border: none;
 }
